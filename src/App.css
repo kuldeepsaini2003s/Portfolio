@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #7b61ff;
+  --color-primaryLight: #9f8dff;
+  --color-primaryDark: #6a4eff;
+  --color-secondary: #ff6584;
+  --color-accent: #00f5ff;
+  --color-dark: #0b0a12;
+  --color-darkAlt: #16141f;
+  --color-light: #ffffff;
+  --color-gray: #a0a0b0;
+  --color-cardBg: rgba(22, 20, 31, 0.7);
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-glassStroke: rgba(255, 255, 255, 0.1);
+}
+
+/* Custom background utilities */
+@layer utilities {
+  .bg-glass {
+    background-color: var(--color-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-glassStroke);
+  }
+
+  .bg-card {
+    background-color: var(--color-cardBg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-glassStroke);
+  }
+
+  .bg-radial-primary {
+    background: radial-gradient(
+      circle,
+      var(--color-primary) 0%,
+      rgba(123, 97, 255, 0) 70%
+    );
+  }
+
+  .bg-radial-secondary {
+    background: radial-gradient(
+      circle,
+      var(--color-secondary) 0%,
+      rgba(255, 101, 132, 0) 70%
+    );
+  }
+
+  .bg-radial-accent {
+    background: radial-gradient(
+      circle,
+      var(--color-accent) 0%,
+      rgba(0, 245, 255, 0) 70%
+    );
+  }
+
+  .text-gradient {
+    background-image: linear-gradient(
+      to right,
+      var(--color-light),
+      var(--color-primaryLight)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s infinite ease-in-out;
+  }
+
+  .animate-pulse-custom {
+    animation: pulse-custom 3s infinite ease-in-out;
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes pulse-custom {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* From Uiverse.io by CYBWEBALI */
+.btn {
+  transition: transform 0.5s;
+}
+
+.btn:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-0.5em);
+}
+
+.btn svg {
+  transition: transform 0.5s;
+}
+
+.btn:hover svg {
+  transform: scale(0.9);
+  fill: #333333;
+}
+
+.button {  
+  width: 180px;
+  position: relative;
+  text-align: center;
+  border: 2px solid var(--color-primary);
+  transition: background 0.3s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,
+.text,
+.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0;
+}
+
+.text,
+.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  border: none;
+  background: var(--color-primaryDark);
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
