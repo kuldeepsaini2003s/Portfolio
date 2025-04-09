@@ -152,8 +152,7 @@
   fill: #333333;
 }
 
-.button {  
-  width: 180px;
+.button {    
   position: relative;
   text-align: center;
   border: 2px solid var(--color-primary);

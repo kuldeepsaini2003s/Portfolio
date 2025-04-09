@@ -6,7 +6,7 @@ const Hero = () => {
     >
       <div className="container mx-auto px-6 pt-10 relative z-10">
         <div className="max-w-2xl">
-          <div className="flex items-center text-primary font-bold mb-5 animate-fadeInUp">
+          <div className="flex items-center text-primary font-bold mb-5 max-[483px]:mt-10 animate-fadeInUp">
             <div className="w-10 h-0.5 bg-primary mr-3"></div>
             Frontend Developer
           </div>
@@ -18,7 +18,7 @@ const Hero = () => {
             and visually appealing. With 1+ years of experience in modern web
             technologies.
           </p>
-          <div className="flex gap-5 animate-fadeInUp animation-delay-400">
+          <div className="flex gap-5 max-[402px]:text-sm animate-fadeInUp animation-delay-400">
             <a
               href="#projects"
               className="bg-primary text-light px-6 py-2 rounded-full font-medium transition-all hover:translate-y-[-5px] hover:shadow-lg hover:shadow-primary/40"
@@ -28,7 +28,7 @@ const Hero = () => {
             <a
               href="/Kuldeep Saini Resume (1).pdf"
               download
-              className="button rounded-full"
+              className="button rounded-full w-44 max-[403px]:w-24"
             >
               <div className="button-wrapper font-medium">
                 <div className="text">Hire Me</div>

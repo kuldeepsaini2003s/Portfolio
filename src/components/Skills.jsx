@@ -8,6 +8,8 @@ import NodeJsIcon from "../SVG/NodeIcon.svg";
 import NextJsIcon from "../SVG/NextIcon.svg";
 import MongoDBIcon from "../SVG/MongoDBIcon.svg";
 import ExpressJsIcon from "../SVG/ExpressIcon.svg";
+import GithubIcon from "../SVG/GithubIcon.svg";
+import GitIcon from "../SVG/GitIcon.svg";
 
 const Skills = () => {
   const techStack = [
@@ -20,6 +22,8 @@ const Skills = () => {
     { icon: NextJsIcon, name: "Next.js" },
     { icon: MongoDBIcon, name: "MongoDB" },
     { icon: ExpressJsIcon, name: "Express.js" },
+    { icon: GitIcon, name: "Git" },
+    { icon: GithubIcon, name: "Github" },
   ];
   return (
     <section className="bg-black">

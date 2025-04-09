@@ -8,6 +8,10 @@ import NodeJsIcon from "../SVG/NodeIcon.svg";
 import NextJsIcon from "../SVG/NextIcon.svg";
 import MongoDBIcon from "../SVG/MongoDBIcon.svg";
 import ExpressJsIcon from "../SVG/ExpressIcon.svg";
+import GithubIcon from "../SVG/GithubIcon.svg";
+import GitIcon from "../SVG/GitIcon.svg";
+import VSCodeIcon from "../SVG/VsCodeIcon.svg";
+
 const About = () => {
   const skills = [
     { icon: HTMLIcon, name: "HTML", level: "90%" },
@@ -19,12 +23,15 @@ const About = () => {
     { icon: NextJsIcon, name: "Next.js", level: "80%" },
     { icon: MongoDBIcon, name: "MongoDB", level: "70%" },
     { icon: ExpressJsIcon, name: "Express.js", level: "75%" },
+    { icon: GithubIcon, name: "Github", level: "85%" },
+    { icon: GitIcon, name: "Git", level: "85%" },
+    { icon: VSCodeIcon, name: "VS Code", level: "90%" },
   ];
 
   return (
-    <section id="about" className="py-20 bg-black overflow-hidden">
+    <section id="about" className="py-10 bg-black overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="text-primary font-bold uppercase tracking-widest text-sm mb-3 animate-fadeInUp">
             Get To Know Me
           </div>
@@ -39,7 +46,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative animate-fadeInUp animation-delay-400">
-            <div className="w-full h-[800px] bg-card rounded-2xl shadow-xl flex items-center justify-center">
+            <div className="w-full lg:h-[800px] bg-card rounded-2xl shadow-xl flex items-center justify-center">
               <img
                 className="w-full h-full object-top object-cover aspect-square rounded-xl"
                 src={Author}
@@ -55,30 +62,32 @@ const About = () => {
           </div>
 
           <div className="animate-fadeInUp animation-delay-500">
-            <p className="text-gray mb-5">
-              Hello! I'm Kuldeep Saini, a full-stack developer based in San Francisco. I
-              specialize in building (and occasionally designing) exceptional
-              digital experiences.
+            <p className="text-gray mb-3">
+              Hi, I'm Kuldeep — a Frontend Engineer driven by a passion for
+              creating fast, user-centric web applications.
             </p>
-            <p className="text-gray mb-5">
-              My journey in web development started back in 2018 when I decided
-              to try creating custom websites for friends. What began as a hobby
-              quickly turned into a passion and then a full-time career.
+            <p className="text-gray mb-3">
+              Over the past year, I’ve worked with ReactJS and Next.js to build
+              dynamic and responsive interfaces that not only look great but
+              also perform efficiently. I enjoy turning complex problems into
+              clean, scalable solutions using modern web technologies.{" "}
             </p>
-            <p className="text-gray mb-10">
-              Today, I've had the privilege of working at an advertising agency,
-              a startup, and as a freelancer for various clients. My main focus
-              these days is building accessible, inclusive products and digital
-              experiences at Upstatement for a variety of clients.
+            <p className="text-gray mb-3">
+              Whether it's improving page speed, enhancing UI interactions, or
+              writing reusable code, I’m focused on delivering smooth and
+              engaging digital experiences. Hello! I'm Kuldeep Saini, a
+              full-stack developer based in San Francisco. I specialize in
+              building (and occasionally designing) exceptional digital
+              experiences.
             </p>
 
             <div>
               <h3 className="text-2xl font-bold mb-6">My Skills</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
                 {skills.map((skill, i) => (
                   <div
                     key={i}
-                    className="bg-glass border border-glassStroke rounded-xl p-5 text-center transition-all hover:translate-y-[-10px] hover:shadow-lg hover:border-primary"
+                    className="bg-glass border border-glassStroke rounded-xl p-3 text-center transition-all hover:translate-y-[-10px] hover:shadow-lg hover:border-primary"
                   >
                     <div className="w-12 h-12 rounded-lg flex items-center justify-center text-2xl text-light mx-auto mb-3">
                       <img src={skill.icon} alt="" />
