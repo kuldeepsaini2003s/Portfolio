@@ -278,3 +278,10 @@
   /* transform: translateY(-30px); */
   transition-duration: 0.3s;
 }
+
+.swiper-custom-pagination .swiper-pagination {
+  position: static;
+  margin-top: 1rem;
+  text-align: center;  
+}
+

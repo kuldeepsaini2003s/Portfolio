@@ -110,13 +110,16 @@ const Projects = () => {
         </div>
 
         <Swiper
-          className="mySwiper overflow-visible"
+          className="mySwiper overflow-visible swiper-custom-pagination"
           pagination={true}
           modules={[Pagination]}
           spaceBetween={20}
           slidesPerView={2}
           breakpoints={{
-            768: {
+            320: {
+              slidesPerView: 1,
+            },
+            600: {
               slidesPerView: 2,
             },
             1024: {
@@ -126,7 +129,7 @@ const Projects = () => {
         >
           {projects.map((project) => (
             <SwiperSlide key={project?.id} className="overflow-visible">
-              <div className="bg-card border h-[30rem] border-glassStroke hover:z-10 rounded-2xl transition-all hover:-translate-y-3 hover:shadow-xl hover:border-primary block">
+              <div className="bg-card border border-glassStroke hover:z-10 rounded-2xl transition-all hover:-translate-y-3 hover:shadow-xl hover:border-primary block">
                 <a
                   href={project.link}
                   target="_blank"
