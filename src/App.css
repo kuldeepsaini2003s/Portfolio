@@ -232,7 +232,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  box-shadow: 0px 0px 0px 4px var(--color-primaryLight);
   cursor: pointer;
   transition-duration: 0.3s;
   overflow: hidden;
@@ -252,7 +252,7 @@
   width: 140px;
   border-radius: 50px;
   transition-duration: 0.3s;
-  background-color: rgb(181, 160, 255);
+  background-color: var(--color-primaryDark);
   align-items: center;
 }
 
@@ -282,6 +282,5 @@
 .swiper-custom-pagination .swiper-pagination {
   position: static;
   margin-top: 1rem;
-  text-align: center;  
+  text-align: center;
 }
-
