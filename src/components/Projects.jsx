@@ -86,8 +86,7 @@ const Projects = () => {
       id: 5,
       title: "Finick",
       image: Finick,
-      description:
-        "Binge-worthy stories, blockbuster hits, and exclusive originals — all at your fingertips. Stream what you love, when you want.",
+      description: "",
       tags: ["HTML", "CSS", "Tailwind", "JavaScript", "React"],
       link: "https://ace-studios-eosin.vercel.app/",
       github: "https://github.com/kuldeepsaini2003s/Ace-Studios",
