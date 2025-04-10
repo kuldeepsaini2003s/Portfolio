@@ -1,6 +1,12 @@
 import Streamtube from "../Images/Streamtube.png";
 import QuickBite from "../Images/Quickbite.png";
 import Netflix from "../Images/Netflix.png";
+import AroundWithIn from "../Images/AroundWithIn.png";
+import Finick from "../Images/Finick.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const Projects = () => {
   const projects = [
@@ -56,6 +62,36 @@ const Projects = () => {
       link: "https://netflix-kuldeep.vercel.app/",
       github: "https://github.com/kuldeepsaini2003s/GPT-Powered-NetFlix",
     },
+    {
+      id: 4,
+      title: "Around With In",
+      image: AroundWithIn,
+      description:
+        "Built and maintained a mental health support platform for individuals dealing with anger and anxiety, implementing responsive UI, Google Meet integration, and real-time notifications.",
+      tags: [
+        "HTML",
+        "CSS",
+        "Tailwind",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Google Meet",
+        "Google Sheet",
+        "Google Calender",
+      ],
+      link: "https://aroundwithin.in/",
+      github: "https://aroundwithin.in/",
+    },
+    {
+      id: 5,
+      title: "Finick",
+      image: Finick,
+      description:
+        "Binge-worthy stories, blockbuster hits, and exclusive originals — all at your fingertips. Stream what you love, when you want.",
+      tags: ["HTML", "CSS", "Tailwind", "JavaScript", "React"],
+      link: "https://ace-studios-eosin.vercel.app/",
+      github: "https://github.com/kuldeepsaini2003s/Ace-Studios",
+    },
   ];
 
   return (
@@ -73,39 +109,63 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <Swiper
+          className="mySwiper overflow-visible"
+          pagination={true}
+          modules={[Pagination]}
+          spaceBetween={20}
+          slidesPerView={2}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
           {projects.map((project) => (
-            <a
-              href={project.github}
-              target="_blank"
-              key={project?.id}
-              className="bg-card border border-glassStroke rounded-2xl overflow-hidden transition-all hover:-translate-y-3 hover:shadow-xl hover:border-primary"
-            >
-              <a target="_blank" href={project.link}>
-                <img
-                  src={project?.image}
-                  className="h-56 object-contain w-full bg-darkAlt flex items-center justify-center text-gray"
-                />
-              </a>
-              <div className="px-6 pb-2">
-                <h3 className="text-2xl font-semibold mb-2">
-                  {project?.title}
-                </h3>
-                <p className="text-gray text-sm mb-2">{project?.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project?.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-glass text-primaryLight text-xs rounded-full border border-glassStroke"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+            <SwiperSlide key={project?.id} className="overflow-visible">
+              <div className="bg-card border h-[30rem] border-glassStroke hover:z-10 rounded-2xl transition-all hover:-translate-y-3 hover:shadow-xl hover:border-primary block">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={project?.image}
+                    alt={project?.title}
+                    className="h-56 object-contain rounded-2xl w-full bg-darkAlt flex items-center justify-center text-gray"
+                  />
+                </a>
+                <div className="px-6 py-2">
+                  <a
+                    href={project.github}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <h3 className="text-2xl font-semibold mb-2">
+                      {project?.title}
+                    </h3>
+                    <p className="text-gray text-sm mb-2 line-clamp-3">
+                      {project?.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project?.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 bg-glass text-primaryLight text-xs rounded-full border border-glassStroke"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </a>
                 </div>
               </div>
-            </a>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
