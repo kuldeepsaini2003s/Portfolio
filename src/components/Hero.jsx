@@ -26,7 +26,7 @@ const Hero = () => {
               View My Work
             </a>
             <a
-              href="/Kuldeep Saini Resume (1).pdf"
+              href="/Kuldeep Saini Resume (Full Stack).pdf"
               download
               className="button rounded-full w-44 max-[403px]:w-24"
             >
