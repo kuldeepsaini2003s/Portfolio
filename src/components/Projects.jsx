@@ -12,6 +12,26 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Around With In",
+      image: AroundWithIn,
+      description:
+        "Built and maintained a mental health support platform for individuals dealing with anger and anxiety, implementing responsive UI, Google Meet integration, and real-time notifications.",
+      tags: [
+        "HTML",
+        "CSS",
+        "Tailwind",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Google Meet",
+        "Google Sheet",
+        "Google Calender",
+      ],
+      link: "https://aroundwithin.in/",
+      github: "https://aroundwithin.in/",
+    },
+    {
+      id: 2,
       title: "Video-Streaming-platform-Stream-Tube-from-Scratch",
       image: Streamtube,
       description:
@@ -34,7 +54,7 @@ const Projects = () => {
         "https://github.com/kuldeepsaini2003s/Video-Streaming-platform-Stream-Tube-from-Scratch",
     },
     {
-      id: 2,
+      id: 3,
       title: "Food-Delivery-App--QUICK-BITE",
       image: QuickBite,
       description:
@@ -45,7 +65,7 @@ const Projects = () => {
         "https://github.com/kuldeepsaini2003s/Food-Delivery-App--QUICK-BITE",
     },
     {
-      id: 3,
+      id: 4,
       title: "GPT-Powered-NetFlix",
       image: Netflix,
       description:
@@ -61,26 +81,6 @@ const Projects = () => {
       ],
       link: "https://netflix-kuldeep.vercel.app/",
       github: "https://github.com/kuldeepsaini2003s/GPT-Powered-NetFlix",
-    },
-    {
-      id: 4,
-      title: "Around With In",
-      image: AroundWithIn,
-      description:
-        "Built and maintained a mental health support platform for individuals dealing with anger and anxiety, implementing responsive UI, Google Meet integration, and real-time notifications.",
-      tags: [
-        "HTML",
-        "CSS",
-        "Tailwind",
-        "JavaScript",
-        "React",
-        "Redux",
-        "Google Meet",
-        "Google Sheet",
-        "Google Calender",
-      ],
-      link: "https://aroundwithin.in/",
-      github: "https://aroundwithin.in/",
     },
     {
       id: 5,
