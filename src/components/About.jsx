@@ -75,10 +75,7 @@ const About = () => {
             <p className="text-gray mb-3">
               Whether it's improving page speed, enhancing UI interactions, or
               writing reusable code, I’m focused on delivering smooth and
-              engaging digital experiences. Hello! I'm Kuldeep Saini, a
-              full-stack developer based in San Francisco. I specialize in
-              building (and occasionally designing) exceptional digital
-              experiences.
+              engaging digital experiences.
             </p>
 
             <div>
